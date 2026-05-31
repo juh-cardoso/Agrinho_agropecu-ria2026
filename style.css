@@ -32,7 +32,7 @@ nav a{
 .hero{
     height:100vh;
 
-    background-image:url('../images/background.jpg');
+    background-image:url('img/fundo_campo.png');
 
     background-size:cover;
     background-position:center;
