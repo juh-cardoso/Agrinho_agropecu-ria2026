@@ -2,86 +2,360 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>A Mudança Começa por Você!</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <header>
+    <!-- CABEÇALHO -->
+
+    <header class="header">
+
         <div class="logo">
-            <img src="img/logo_agrinho.png" alt="Agrinho">
+
+            <img src="images/logo.png" alt="Agrinho">
+
         </div>
 
         <nav>
+
             <ul>
-                <li><a href="#">Início</a></li>
+
+                <li><a href="#inicio">Início</a></li>
+
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#ideias">Ideias</a></li>
-                <li><a href="#participar">Participar</a></li>
+
+                <li><a href="#ideias">Ideias e Inovações</a></li>
+
+                <li><a href="#participar">Como Participar</a></li>
+
+                <li><a href="#noticias">Notícias</a></li>
+
                 <li><a href="#contato">Contato</a></li>
+
             </ul>
+
         </nav>
+
+        <div class="header-buttons">
+
+            <a href="login.html" class="btn-entrar">
+
+                <img src="images/user.png" alt="">
+                Entrar
+
+            </a>
+
+            <a href="#participar" class="btn-participe">
+
+                <img src="images/folha.png" alt="">
+                Participe!
+
+            </a>
+
+        </div>
+
     </header>
 
-    <section class="hero">
+    <!-- HERO -->
 
-        <div class="overlay">
+    <section id="inicio" class="hero">
 
-            <h1>A MUDANÇA COMEÇA POR VOCÊ!</h1>
+        <div class="hero-overlay"></div>
 
-            <p>
-                Compartilhe ideias e inovações para transformar o agro
-                e construir um futuro mais sustentável.
-            </p>
+        <div class="hero-content">
 
-            <a href="#participar" class="btn">
-                Envie sua ideia
+            <!-- ESQUERDA -->
+
+            <div class="hero-left">
+
+                <div class="titulo-container">
+
+                    <img src="images/risco-esquerda.png" class="decoracao-risco">
+
+                    <h1>
+
+                        A MUDANÇA
+                        <br>
+                        COMEÇA
+                        <br>
+                        POR VOCÊ!
+
+                    </h1>
+
+                    <img src="images/folha-direita.png" class="folha-titulo">
+
+                </div>
+
+                <p>
+
+                    Compartilhe suas ideias e inovações para
+                    transformar o agro e construir um futuro
+                    melhor para todos.
+
+                </p>
+
+                <div class="area-botao">
+
+                    <a href="#participar" class="btn-ideia">
+
+                        <img src="images/lampada.png">
+
+                        Envie sua ideia
+
+                    </a>
+
+                </div>
+
+                <div class="texto-curvo">
+
+                    Sua ideia pode
+                    mudar o agro!
+
+                </div>
+
+            </div>
+
+            <!-- CENTRO -->
+
+            <div class="hero-center">
+
+                <img src="images/menina.png"
+                    alt="Menina Agrinho"
+                    class="menina">
+
+            </div>
+
+            <!-- DIREITA -->
+
+            <div class="hero-right">
+
+                <!-- ÍCONES SUPERIORES -->
+
+                <img src="images/lampada-branca.png"
+                    class="icone flutuante lampada">
+
+                <img src="images/drone.png"
+                    class="icone flutuante drone">
+
+                <img src="images/folha-branca.png"
+                    class="icone flutuante folha">
+
+                <img src="images/painel-solar.png"
+                    class="icone flutuante painel">
+
+                <img src="images/wifi.png"
+                    class="icone flutuante wifi">
+
+                <img src="images/gota.png"
+                    class="icone flutuante gota">
+
+                <img src="images/planta.png"
+                    class="icone flutuante planta">
+
+                <img src="images/energia.png"
+                    class="icone flutuante energia">
+
+                <!-- TARJA VERDE -->
+
+                <div class="pincel">
+
+                    <h2>
+
+                        IDEIAS
+                        <br>
+                        INOVAÇÕES
+                        <br>
+                        SUSTENTABILIDADE
+                        <br>
+                        FUTURO
+
+                    </h2>
+
+                </div>
+
+                <div class="slogan">
+
+                    <p>
+
+                        Participe. Inspire.
+                        Transforme.
+
+                    </p>
+
+                    <span>
+
+                        #JuntosPeloAgro
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ÍCONES DECORATIVOS EXTRAS -->
+
+        <div class="decoracoes">
+
+            <img src="images/folha1.png" class="d1">
+            <img src="images/folha2.png" class="d2">
+            <img src="images/folha3.png" class="d3">
+            <img src="images/folha4.png" class="d4">
+            <img src="images/folha5.png" class="d5">
+            <img src="images/folha6.png" class="d6">
+
+        </div>
+
+    </section>
+
+    <!-- FAIXA BRANCA INFERIOR -->
+
+    <section class="faixa-cards">
+
+        <div class="cards-container">
+
+            <!-- CARD 1 -->
+
+            <a href="ideias.html" class="card">
+
+                <div class="icone-card">
+
+                    <img src="images/lampada.png">
+
+                </div>
+
+                <h3>
+
+                    Compartilhe
+                    sua ideia
+
+                </h3>
+
+                <p>
+
+                    Tem uma solução criativa
+                    para o agro? Envie sua
+                    ideia e faça a diferença!
+
+                </p>
+
+                <span>➜</span>
+
+            </a>
+
+            <!-- CARD 2 -->
+
+            <a href="comunidade.html" class="card">
+
+                <div class="icone-card">
+
+                    <img src="images/pessoas.png">
+
+                </div>
+
+                <h3>
+
+                    Participe da
+                    comunidade
+
+                </h3>
+
+                <p>
+
+                    Conecte-se com outras
+                    pessoas, troque experiências
+                    e fortaleça ideias incríveis.
+
+                </p>
+
+                <span>➜</span>
+
+            </a>
+
+            <!-- CARD 3 -->
+
+            <a href="inovacao.html" class="card">
+
+                <div class="icone-card">
+
+                    <img src="images/foguete.png">
+
+                </div>
+
+                <h3>
+
+                    Inove e
+                    transforme
+
+                </h3>
+
+                <p>
+
+                    As melhores ideias podem
+                    virar realidade e gerar
+                    impacto positivo no agro.
+
+                </p>
+
+                <span>➜</span>
+
+            </a>
+
+            <!-- CARD 4 -->
+
+            <a href="premios.html" class="card">
+
+                <div class="icone-card">
+
+                    <img src="images/trofeu.png">
+
+                </div>
+
+                <h3>
+
+                    Seja
+                    reconhecido
+
+                </h3>
+
+                <p>
+
+                    Destaque-se!
+                    Ideias selecionadas serão
+                    reconhecidas.
+
+                </p>
+
+                <span>➜</span>
+
             </a>
 
         </div>
 
     </section>
 
-    <section class="cards">
+    <!-- SEÇÕES FUTURAS -->
 
-        <div class="card">
-            <h2>Compartilhe</h2>
-            <p>Envie propostas para melhorar o agronegócio.</p>
-        </div>
+    <section id="sobre"></section>
 
-        <div class="card">
-            <h2>Participe</h2>
-            <p>Conecte-se com outros estudantes e produtores.</p>
-        </div>
+    <section id="ideias"></section>
 
-        <div class="card">
-            <h2>Inove</h2>
-            <p>Transforme boas ideias em soluções reais.</p>
-        </div>
+    <section id="participar"></section>
 
-        <div class="card">
-            <h2>Impacte</h2>
-            <p>Ajude a construir um agro sustentável.</p>
-        </div>
+    <section id="noticias"></section>
 
-    </section>
-
-    <div class="card">
-
-    <img src="img/pessoas_comunidade.png" alt="Comunidade">
-
-    <h2>Participe</h2>
-
-    <p>
-        Conecte-se com outras pessoas e compartilhe ideias.
-    </p>
-
-</div>
+    <section id="contato"></section>
 
     <script src="js/script.js"></script>
 
