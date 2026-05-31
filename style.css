@@ -559,3 +559,405 @@ nav a:hover{
     }
 
 }
+
+/* ===================================
+   POSIÇÃO DOS ÍCONES DECORATIVOS
+=================================== */
+
+.lampada{
+    top:-40px;
+    left:20px;
+    width:140px;
+}
+
+.drone{
+    top:20px;
+    right:40px;
+    width:90px;
+}
+
+.folha{
+    top:40px;
+    right:-20px;
+    width:70px;
+}
+
+.painel{
+    left:-60px;
+    bottom:130px;
+    width:90px;
+}
+
+.wifi{
+    left:-15px;
+    bottom:20px;
+    width:90px;
+}
+
+.gota{
+    right:-30px;
+    bottom:60px;
+    width:60px;
+}
+
+.planta{
+    top:-80px;
+    left:120px;
+    width:90px;
+}
+
+.energia{
+    top:-10px;
+    left:180px;
+    width:60px;
+}
+
+/* ===================================
+   FOLHAS DECORATIVAS
+=================================== */
+
+.decoracoes{
+
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+}
+
+.decoracoes img{
+
+    position:absolute;
+    opacity:.9;
+
+}
+
+.d1{
+    left:0;
+    bottom:250px;
+    width:90px;
+}
+
+.d2{
+    left:0;
+    bottom:0;
+    width:150px;
+}
+
+.d3{
+    right:0;
+    bottom:0;
+    width:150px;
+}
+
+.d4{
+    right:40px;
+    top:200px;
+    width:70px;
+}
+
+.d5{
+    left:250px;
+    top:220px;
+    width:60px;
+}
+
+.d6{
+    right:300px;
+    bottom:70px;
+    width:90px;
+}
+
+/* ===================================
+   DESTAQUE MENU ATIVO
+=================================== */
+
+nav ul li:first-child a{
+
+    position:relative;
+
+    color:#0d5823;
+
+}
+
+nav ul li:first-child a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:4px;
+
+    left:0;
+    bottom:-10px;
+
+    background:#7ebf20;
+
+    border-radius:20px;
+
+}
+
+/* ===================================
+   ÍCONES DOS BOTÕES
+=================================== */
+
+.btn-participe img,
+.btn-entrar img,
+.btn-ideia img{
+
+    width:24px;
+    height:24px;
+
+}
+
+/* ===================================
+   EFEITO GLASS NO HERO
+=================================== */
+
+.hero-left,
+.hero-right{
+
+    backdrop-filter:blur(2px);
+
+}
+
+/* ===================================
+   CURVA BRANCA INFERIOR
+=================================== */
+
+.faixa-cards::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100px;
+    left:0;
+
+    width:100%;
+    height:150px;
+
+    background:#f8f7f2;
+
+    border-radius:
+    50% 50% 0 0 /
+    100% 100% 0 0;
+
+}
+
+/* ===================================
+   CARD ÍCONE HOVER
+=================================== */
+
+.card:hover .icone-card{
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+.icone-card{
+
+    transition:.4s;
+
+}
+
+/* ===================================
+   ANIMAÇÃO DA TARJA VERDE
+=================================== */
+
+.pincel{
+
+    animation:pulsar 4s infinite;
+
+}
+
+@keyframes pulsar{
+
+    0%{
+        transform:rotate(-2deg) scale(1);
+    }
+
+    50%{
+        transform:rotate(-2deg) scale(1.02);
+    }
+
+    100%{
+        transform:rotate(-2deg) scale(1);
+    }
+
+}
+
+/* ===================================
+   ANIMAÇÃO TEXTO PRINCIPAL
+=================================== */
+
+.hero-left h1{
+
+    animation:aparecer 1.3s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================================
+   ANIMAÇÃO BOTÕES
+=================================== */
+
+.btn-ideia,
+.btn-participe,
+.btn-entrar{
+
+    transition:
+    transform .3s,
+    box-shadow .3s;
+
+}
+
+.btn-ideia:hover,
+.btn-participe:hover,
+.btn-entrar:hover{
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,.2);
+
+}
+
+/* ===================================
+   SOMBRA MENINA
+=================================== */
+
+.menina{
+
+    filter:
+    drop-shadow(0 25px 35px rgba(0,0,0,.25));
+
+}
+
+/* ===================================
+   RESPONSIVO TABLET
+=================================== */
+
+@media(max-width:1200px){
+
+    .hero-content{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+    .hero-left,
+    .hero-center,
+    .hero-right{
+
+        width:100%;
+
+    }
+
+    .hero-left{
+
+        margin-bottom:50px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:5rem;
+
+    }
+
+    .cards-container{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+/* ===================================
+   RESPONSIVO CELULAR
+=================================== */
+
+@media(max-width:768px){
+
+    .header{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .hero{
+
+        padding-top:220px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:3.5rem;
+
+    }
+
+    .hero-left p{
+
+        font-size:1.2rem;
+
+    }
+
+    .btn-ideia{
+
+        width:100%;
+        justify-content:center;
+
+    }
+
+    .cards-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .pincel{
+
+        margin-top:50px;
+
+    }
+
+    .slogan p,
+    .slogan span{
+
+        font-size:1.4rem;
+
+    }
+
+}
