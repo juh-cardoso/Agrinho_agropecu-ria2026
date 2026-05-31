@@ -83,3 +83,12 @@ nav a{
     color:#2f5e1e;
     margin-bottom:15px;
 }
+
+.card{
+    text-align:center;
+}
+
+.card img{
+    width:90px;
+    margin-bottom:20px;
+}
