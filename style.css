@@ -1,94 +1,561 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f4f4;
+    font-family:'Baloo 2', cursive;
+    overflow-x:hidden;
+    background:#f8f7f2;
 }
 
-header{
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:110px;
+
+    background:#ffffff;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
-    background:white;
+
+    padding:0 70px;
+
+    z-index:9999;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+}
+
+.logo img{
+
+    height:75px;
+
 }
 
 nav ul{
+
     display:flex;
-    gap:30px;
     list-style:none;
+    gap:45px;
+
 }
 
 nav a{
+
     text-decoration:none;
-    color:#2f5e1e;
-    font-weight:bold;
+
+    color:#163a17;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    transition:.3s;
+
 }
 
-.hero{
-    height:100vh;
+nav a:hover{
 
-    background-image:url('img/fundo_campo.png');
-    background-size:cover;
-    background-position:center;
+    color:#7fbf25;
+
+}
+
+.header-buttons{
+
+    display:flex;
+    gap:20px;
+
+}
+
+/* ===========================
+   BOTÕES SUPERIORES
+=========================== */
+
+.btn-entrar{
+
+    border:3px solid #1d4b24;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#1d4b24;
+
+    font-weight:700;
 
     display:flex;
     align-items:center;
+    gap:10px;
+
+    transition:.3s;
+
 }
 
-.overlay{
-    width:50%;
-    margin-left:8%;
+.btn-entrar:hover{
+
+    background:#1d4b24;
+
     color:white;
+
+    transform:translateY(-3px);
+
 }
 
-.overlay h1{
-    font-size:70px;
-    margin-bottom:20px;
-}
+.btn-participe{
 
-.overlay p{
-    font-size:22px;
-    max-width:600px;
-    margin-bottom:30px;
-}
+    background:#93bf1f;
 
-.btn{
-    background:#5cb85c;
-    color:white;
     padding:15px 35px;
+
+    border-radius:50px;
+
+    color:white;
+
     text-decoration:none;
-    border-radius:40px;
+
+    font-weight:700;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    transition:.3s;
+
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    padding:60px 8%;
+.btn-participe:hover{
+
+    background:#7ca61b;
+
+    transform:translateY(-3px);
+
 }
 
-.card{
-    background:white;
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    position:relative;
+
+    background-image:url('../images/campo.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding-top:110px;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to right,
+        rgba(255,255,255,.45),
+        rgba(255,255,255,.05)
+    );
+
+}
+
+/* ===========================
+   CONTEÚDO HERO
+=========================== */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:80vh;
+
+    padding:0 80px;
+
+}
+
+/* ===========================
+   LADO ESQUERDO
+=========================== */
+
+.hero-left{
+
+    width:35%;
+
+}
+
+.hero-left h1{
+
+    font-size:6rem;
+
+    line-height:0.9;
+
+    color:#0b4a16;
+
+    text-transform:uppercase;
+
+    font-weight:900;
+
+    text-shadow:
+    0 4px 10px rgba(0,0,0,.1);
+
+}
+
+.hero-left p{
+
+    margin-top:25px;
+
+    font-size:1.6rem;
+
+    color:#1d1d1d;
+
+    max-width:500px;
+
+}
+
+/* ===========================
+   BOTÃO IDEIA
+=========================== */
+
+.btn-ideia{
+
+    margin-top:40px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 40px;
+
+    background:#0f5b22;
+
+    border-radius:50px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn-ideia:hover{
+
+    transform:translateY(-5px);
+
+    background:#15792d;
+
+}
+
+.texto-curvo{
+
+    margin-top:30px;
+
+    font-size:2rem;
+
+    color:#14521e;
+
+    font-style:italic;
+
+}
+
+/* ===========================
+   MENINA
+=========================== */
+
+.hero-center{
+
+    width:30%;
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.menina{
+
+    width:700px;
+
+    max-width:100%;
+
+    animation:flutuar 4s ease-in-out infinite;
+
+}
+
+@keyframes flutuar{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   DIREITA
+=========================== */
+
+.hero-right{
+
+    width:25%;
+
+    position:relative;
+
+}
+
+/* ===========================
+   PINCEL VERDE
+=========================== */
+
+.pincel{
+
+    background:#0c5d29;
+
     padding:30px;
+
     border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    transform:rotate(-2deg);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
 }
 
-.card h2{
-    color:#2f5e1e;
-    margin-bottom:15px;
+.pincel h2{
+
+    color:white;
+
+    line-height:1.4;
+
+    font-size:2rem;
+
+    text-transform:uppercase;
+
+}
+
+/* ===========================
+   SLOGAN
+=========================== */
+
+.slogan{
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+.slogan p{
+
+    color:white;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    text-shadow:0 3px 8px rgba(0,0,0,.5);
+
+}
+
+.slogan span{
+
+    color:#d0ff3d;
+
+    font-size:2rem;
+
+    font-weight:900;
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.faixa-cards{
+
+    position:relative;
+
+    background:#f8f7f2;
+
+    margin-top:-60px;
+
+    border-top-left-radius:100px;
+    border-top-right-radius:100px;
+
+    z-index:5;
+
+    padding:70px 50px;
+
+}
+
+.cards-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
 }
 
 .card{
-    text-align:center;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    text-decoration:none;
+
+    color:#222;
+
+    transition:.4s;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
 }
 
-.card img{
+.card:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.03);
+
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.15);
+
+}
+
+.icone-card{
+
     width:90px;
-    margin-bottom:20px;
+    height:90px;
+
+    background:#8dbf22;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.icone-card img{
+
+    width:45px;
+
+}
+
+.card h3{
+
+    font-size:2rem;
+
+    color:#173d1b;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    font-size:1.15rem;
+
+    line-height:1.7;
+
+}
+
+.card span{
+
+    display:block;
+
+    margin-top:25px;
+
+    font-size:2rem;
+
+    color:#0f5b22;
+
+}
+
+/* ===========================
+   ÍCONES FLUTUANTES
+=========================== */
+
+.flutuante{
+
+    position:absolute;
+
+    animation:flutuarIcone 5s ease-in-out infinite;
+
+}
+
+@keyframes flutuarIcone{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
 }
